@@ -12,6 +12,7 @@ import {
 } from "../redux/reducer/cartReducer";
 import { RootState, server } from "../redux/store";
 import { CartItem } from "../types/types";
+import qr from "../assets/qr.jpg";
 
 const Cart = () => {
   const { cartItems, subtotal, tax, total, shippingCharges, discount } =
@@ -81,6 +82,10 @@ const Cart = () => {
         ) : (
           <h1>No Items Added</h1>
         )}
+        <div>
+          <img src={qr} alt="qr-code" style={{width:"20%", height:"20%"}}/>
+          <h5>Quality Assurance Trademark</h5>
+        </div>
       </main>
       <aside>
         <p>Subtotal: ₹{subtotal}</p>

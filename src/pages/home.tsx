@@ -11,6 +11,7 @@ const Home = () => {
   const { data, isLoading, isError } = useLatestProductsQuery("");
 
   const dispatch = useDispatch();
+  // console.log(dummyData)
 
   const addToCartHandler = (cartItem: CartItem) => {
     if (cartItem.stock < 1) return toast.error("Out of Stock");
@@ -46,6 +47,7 @@ const Home = () => {
               photo={i.photo}
             />
           ))
+
         )}
       </main>
     </div>
